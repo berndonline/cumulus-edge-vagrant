@@ -53,8 +53,8 @@ iface bond2
     bond-slaves swp2 swp3
 
 # Switch virtual interface configuration SVI
-auto bond2.903
-iface bond2.903
+auto bond2.902
+iface bond2.902
     alias wan-transfer
     address 10.0.255.46/28
 
