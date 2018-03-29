@@ -1,0 +1,38 @@
+graph vx {
+ "fw-1" [function="exit" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_fw-1.sh" ]
+ "fw-2" [function="exit" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_fw-2.sh" ]
+ "edge-1" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "edge-2" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "wan-1" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "wan-2" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "mgmt-1" [function="mgmt" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_mgmt_switch.sh" ]
+ "provider" [function="fake"] 
+
+ "provider":"swp1" -- "wan-1":"swp1"
+ "provider":"swp2" -- "wan-2":"swp1"
+ "provider":"swp3" -- "wan-1":"swp2"
+ "provider":"swp4" -- "wan-2":"swp2"
+
+ "fw-1":"swp0" -- "edge-1":"swp47"
+ "fw-1":"swp1" -- "edge-2":"swp47"
+ "fw-2":"swp0" -- "edge-1":"swp48"
+ "fw-2":"swp1" -- "edge-2":"swp48"
+
+ "fw-1":"swp2" -- "wan-1":"swp47"
+ "fw-1":"swp3" -- "wan-2":"swp47"
+ "fw-2":"swp2" -- "wan-1":"swp48"
+ "fw-2":"swp3" -- "wan-2":"swp48"
+
+ "edge-1":"swp53" -- "edge-2":"swp53"
+ "edge-1":"swp54" -- "edge-2":"swp54"
+ "wan-1":"swp51" -- "wan-2":"swp51"
+ "wan-1":"swp52" -- "wan-2":"swp52"
+
+ "edge-1":"eth0" -- "mgmt-1":"swp1"
+ "edge-2":"eth0" -- "mgmt-1":"swp2"
+ "wan-1":"eth0" -- "mgmt-1":"swp3"
+ "wan-2":"eth0" -- "mgmt-1":"swp4"
+ "fw-1":"eth0" -- "mgmt-1":"swp5"
+ "fw-2":"eth0" -- "mgmt-1":"swp6"
+
+}
