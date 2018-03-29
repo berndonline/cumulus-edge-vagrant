@@ -121,8 +121,6 @@ log syslog informational
 vrf Default-IP-Routing-Table
 !
 ip route 10.0.0.0/8 10.0.255.33
-ip route 172.16.0.0/12 10.0.255.33
-ip route 192.168.0.0/16 10.0.255.33
 ip route 10.0.0.0/16 10.0.255.17
 !
 line vty
