@@ -43,18 +43,18 @@ iface bond1
     bond-slaves swp0 swp1
 
 # Switch virtual interface configuration SVI
-auto bond1.904
-iface bond1.904
+auto bond1.901
+iface bond1.901
     alias backend-transfer
-    address 10.0.255.28/28
+    address 10.0.255.12/28
 
 auto bond2
 iface bond2
     bond-slaves swp2 swp3
 
 # Switch virtual interface configuration SVI
-auto bond2.902
-iface bond2.902
+auto bond2.903
+iface bond2.903
     alias wan-transfer
     address 10.0.255.46/28
 
@@ -121,7 +121,7 @@ log syslog informational
 vrf Default-IP-Routing-Table
 !
 ip route 10.100.0.0/29 10.0.255.33
-ip route 10.0.0.0/16 10.0.255.17
+ip route 10.0.0.0/16 10.0.255.1
 !
 line vty
 !

@@ -1,11 +1,11 @@
 graph vx {
- "fw-1" [function="exit" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_fw-1.sh" ]
- "fw-2" [function="exit" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_fw-2.sh" ]
- "edge-1" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
- "edge-2" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
- "wan-1" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
- "wan-2" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_switch.sh" ]
- "mgmt-1" [function="mgmt" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.0" memory="768" config="./helper_scripts/config_mgmt_switch.sh" ]
+ "fw-1" [function="exit" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_fw-1.sh" ]
+ "fw-2" [function="exit" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_fw-2.sh" ]
+ "edge-1" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "edge-2" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "wan-1" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "wan-2" [function="edge" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_switch.sh" ]
+ "mgmt-1" [function="mgmt" vagrant="eth1" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="768" config="./helper_scripts/config_mgmt_switch.sh" ]
  "provider" [function="fake"] 
 
  "provider":"swp1" -- "wan-1":"swp1"

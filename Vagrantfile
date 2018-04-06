@@ -1,8 +1,8 @@
 # Created by Topology-Converter v4.6.3
 #    Template Revision: v4.6.3
 #    https://github.com/cumulusnetworks/topology_converter
-#    using topology data from: ./topology.dot
-#    built with the following args: ./topology_converter.py ./topology.dot -p libvirt --ansible-hostfile
+#    using topology data from: topology.dot
+#    built with the following args: topology_converter.py topology.dot -p libvirt --ansible-hostfile
 #
 #    NOTE: in order to use this Vagrantfile you will need:
 #       -Vagrant(v1.8.6+) installed: http://www.vagrantup.com/downloads
@@ -111,7 +111,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "fw-2" do |device|
     device.vm.hostname = "fw-2" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
@@ -230,7 +230,7 @@ end
   config.vm.define "fw-1" do |device|
     device.vm.hostname = "fw-1" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
@@ -349,7 +349,7 @@ end
   config.vm.define "mgmt-1" do |device|
     device.vm.hostname = "mgmt-1" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
@@ -482,7 +482,7 @@ end
   config.vm.define "edge-2" do |device|
     device.vm.hostname = "edge-2" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
@@ -601,7 +601,7 @@ end
   config.vm.define "edge-1" do |device|
     device.vm.hostname = "edge-1" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
@@ -720,7 +720,7 @@ end
   config.vm.define "wan-1" do |device|
     device.vm.hostname = "wan-1" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
@@ -867,7 +867,7 @@ end
   config.vm.define "wan-2" do |device|
     device.vm.hostname = "wan-2" 
     device.vm.box = "CumulusCommunity/cumulus-vx"
-    device.vm.box_version = "3.5.0"
+    device.vm.box_version = "3.5.3"
 
     device.vm.provider :libvirt do |v|
       v.memory = 768
